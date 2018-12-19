@@ -20,7 +20,7 @@ class PageCell: UICollectionViewCell {
             
             let attributedText = NSMutableAttributedString(string: headerText,
                                                            attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 18, weight: .heavy)])
-            attributedText.append(NSAttributedString(string: "\n\n\(pageSetup.bodyText ?? "Ничего нет(")",
+            attributedText.append(NSAttributedString(string: "\n\n\(pageSetup.bodyText ?? "Nothing(")",
                                                      attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 13),
                                                                   NSAttributedString.Key.foregroundColor : UIColor.gray]))
             
@@ -38,8 +38,8 @@ class PageCell: UICollectionViewCell {
     
      private let profileImage: UIImageView! = {
         let imageView = UIImageView()
-        //imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
         imageView.backgroundColor = #colorLiteral(red: 0, green: 0.5690457821, blue: 0.5746168494, alpha: 1)
         imageView.image = UIImage(named: "Albert")
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -80,6 +80,7 @@ class PageCell: UICollectionViewCell {
         
         addSubview(topImageContainerView)
         addSubview(descriptionTextView)
+        
         // the leading and trailing anchors better to use then left and right anchors because certail languages such as
         // Arabic it's a language that goes from fight to left so leading and trailing anchors is going to be aware of if the
         // language is right to left ot left to right you don't have to worry about so much what the language orientation so
@@ -98,15 +99,13 @@ class PageCell: UICollectionViewCell {
         profileImage.centerYAnchor.constraint(equalTo: topImageContainerView.centerYAnchor).isActive = true
         profileImage.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 0.5).isActive = true
         
-        // descriptionTextView constraints
         
-        let swipingController = SwipingController()
-        let height = swipingController.bottomControlStackView.topAnchor
+        // descriptionTextView constraints
         descriptionTextView.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor).isActive = true
         descriptionTextView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
         descriptionTextView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
-        //descriptionTextView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
+        descriptionTextView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
         
     }
-    
 }
+

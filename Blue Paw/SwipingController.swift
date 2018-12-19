@@ -12,12 +12,12 @@ import UIKit
 class SwipingController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     let pages = [
-        Page(imageName: "Albert", headerText: "HeHelloHelloHellHeHelloHelloHelloHellolloHeHelloHelloHelloHellolloHeHelloHelloHelloHellolloHeHelloHelloHelloHellolloHeHelloHelloHelloHellolloHeHelloHelloHelloHellolloHeHelloHelloHelloHellolloHeHelloHelloHelloHellolloHeHelloHelloHelloHellolloHeHelloHeHeHelloHelloHelloHellollolloHelloHellolloHeHelloHelloHelloHellolloHeHelloHelloHelloHellolloHeHelloHelloHelloHellolloHeHelloHelloHelloHellolloHeHelloHelloHelloHellollooHellollo", bodyText: "111111"),
-        Page(imageName: "Steve", headerText: "STTTTT", bodyText: nil),
-        Page(imageName: "Mark", headerText: "fdsfdf", bodyText: "33333"),
-        Page(imageName: "Albert", headerText: "Hello", bodyText: "111111"),
-        Page(imageName: "Steve", headerText: "STTTTT", bodyText: nil),
-        Page(imageName: "Mark", headerText: "fdsfdf", bodyText: "33333")
+        Page(imageName: "Albert", headerText: "Albert", bodyText: "I like to go for cinches. I like to shoot fish in a barrel. But I like to do it after the water has run out."),
+        Page(imageName: "Steve", headerText: "Steve", bodyText: nil),
+        Page(imageName: "Mark", headerText: "Mark", bodyText: "To succeed in business, to reach the top, an individual must know all it is possible to know about that business."),
+        Page(imageName: "Albert", headerText: "Albert", bodyText: "Winning is a habit. Unfortunately so is losing"),
+        Page(imageName: "Steve", headerText: "Steve", bodyText: nil),
+        Page(imageName: "Mark", headerText: "Mark", bodyText: "Men who do things without being told draw the most wages.")
     ]
     
     private let previousButton: UIButton! = {
@@ -49,12 +49,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         return pc
     }()
     
-     var bottomControlStackView: UIStackView! = {
-       let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.distribution = .fillEqually
-        return stackView
-    }()
+    var bottomControlStackView = UIStackView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,8 +62,12 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     
     fileprivate func setupButtomControls() {
         
+        
         bottomControlStackView = UIStackView(arrangedSubviews: [previousButton, pageControl, nextButton])
         view.addSubview(bottomControlStackView)
+        bottomControlStackView.translatesAutoresizingMaskIntoConstraints = false
+        bottomControlStackView.distribution = .fillEqually
+        
         
         // bottomControlStackView constraints
         NSLayoutConstraint.activate([
@@ -86,10 +85,10 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     }
     
     @objc private func handlePrev() {
-//        let prevIndex = max(pageControl.currentPage - 1, 0)
-//        let indexPath = IndexPath(item: prevIndex, section: 0)
-//        pageControl.currentPage = prevIndex
-//        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        let prevIndex = max(pageControl.currentPage - 1, 0)
+        let indexPath = IndexPath(item: prevIndex, section: 0)
+        pageControl.currentPage = prevIndex
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
     
     @objc private func handleNext() {
