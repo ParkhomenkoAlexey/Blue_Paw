@@ -12,6 +12,11 @@
 		F07BEA2621C6479700D32FCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F07BEA2421C6479700D32FCB /* Main.storyboard */; };
 		F07BEA2821C6479800D32FCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F07BEA2721C6479800D32FCB /* Assets.xcassets */; };
 		F07BEA2B21C6479800D32FCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F07BEA2921C6479800D32FCB /* LaunchScreen.storyboard */; };
+		F07BEA3321C6942700D32FCB /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BEA3221C6942700D32FCB /* SwipingController.swift */; };
+		F07BEA3521C69C5600D32FCB /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BEA3421C69C5600D32FCB /* PageCell.swift */; };
+		F07BEA3721C6EAD800D32FCB /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BEA3621C6EAD800D32FCB /* Page.swift */; };
+		F093183821C9A7000020DFCD /* SwipingController + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F093183721C9A7000020DFCD /* SwipingController + extension.swift */; };
+		F093183A21C9A7990020DFCD /* SwipingController + UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F093183921C9A7990020DFCD /* SwipingController + UICollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		F07BEA2721C6479800D32FCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F07BEA2A21C6479800D32FCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F07BEA2C21C6479800D32FCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F07BEA3221C6942700D32FCB /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
+		F07BEA3421C69C5600D32FCB /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		F07BEA3621C6EAD800D32FCB /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		F093183721C9A7000020DFCD /* SwipingController + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController + extension.swift"; sourceTree = "<group>"; };
+		F093183921C9A7990020DFCD /* SwipingController + UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController + UICollectionView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,11 @@
 			children = (
 				F07BEA2021C6479700D32FCB /* AppDelegate.swift */,
 				F07BEA2221C6479700D32FCB /* ViewController.swift */,
+				F07BEA3221C6942700D32FCB /* SwipingController.swift */,
+				F093183921C9A7990020DFCD /* SwipingController + UICollectionView.swift */,
+				F093183721C9A7000020DFCD /* SwipingController + extension.swift */,
+				F07BEA3421C69C5600D32FCB /* PageCell.swift */,
+				F07BEA3621C6EAD800D32FCB /* Page.swift */,
 				F07BEA2421C6479700D32FCB /* Main.storyboard */,
 				F07BEA2721C6479800D32FCB /* Assets.xcassets */,
 				F07BEA2921C6479800D32FCB /* LaunchScreen.storyboard */,
@@ -135,8 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F093183A21C9A7990020DFCD /* SwipingController + UICollectionView.swift in Sources */,
 				F07BEA2321C6479700D32FCB /* ViewController.swift in Sources */,
+				F093183821C9A7000020DFCD /* SwipingController + extension.swift in Sources */,
 				F07BEA2121C6479700D32FCB /* AppDelegate.swift in Sources */,
+				F07BEA3521C69C5600D32FCB /* PageCell.swift in Sources */,
+				F07BEA3321C6942700D32FCB /* SwipingController.swift in Sources */,
+				F07BEA3721C6EAD800D32FCB /* Page.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +303,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Blue Paw/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +321,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Blue Paw/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
