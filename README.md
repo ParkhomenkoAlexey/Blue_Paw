@@ -1,5 +1,5 @@
 # Blue_Paw
-
+Use auto layout in iOS application from scratch all programmatically without using the Storyboard. Go over exactly how to layout every object by using NSLayoutAnchor. Handle landscape orientation using a few auto layout tricks.
 
 ## What I have done
  
