@@ -49,8 +49,6 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         return pc
     }()
     
-    var bottomControlStackView = UIStackView()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,9 +59,8 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     }
     
     fileprivate func setupButtomControls() {
-        
-        
-        bottomControlStackView = UIStackView(arrangedSubviews: [previousButton, pageControl, nextButton])
+
+        let bottomControlStackView = UIStackView(arrangedSubviews: [previousButton, pageControl, nextButton])
         view.addSubview(bottomControlStackView)
         bottomControlStackView.translatesAutoresizingMaskIntoConstraints = false
         bottomControlStackView.distribution = .fillEqually
@@ -79,8 +76,9 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
     }
     
     override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        
+
         let x = targetContentOffset.pointee.x
+        print(x)
         pageControl.currentPage = Int(x / view.frame.width)
     }
     

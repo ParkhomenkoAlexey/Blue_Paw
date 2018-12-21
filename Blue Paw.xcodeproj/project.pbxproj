@@ -16,7 +16,7 @@
 		F07BEA3521C69C5600D32FCB /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BEA3421C69C5600D32FCB /* PageCell.swift */; };
 		F07BEA3721C6EAD800D32FCB /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07BEA3621C6EAD800D32FCB /* Page.swift */; };
 		F093183821C9A7000020DFCD /* SwipingController + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F093183721C9A7000020DFCD /* SwipingController + extension.swift */; };
-		F093183A21C9A7990020DFCD /* SwipingController + UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F093183921C9A7990020DFCD /* SwipingController + UICollectionView.swift */; };
+		F093183A21C9A7990020DFCD /* SwipingController + UICollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F093183921C9A7990020DFCD /* SwipingController + UICollectionViewDelegateFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		F07BEA3421C69C5600D32FCB /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		F07BEA3621C6EAD800D32FCB /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		F093183721C9A7000020DFCD /* SwipingController + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController + extension.swift"; sourceTree = "<group>"; };
-		F093183921C9A7990020DFCD /* SwipingController + UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController + UICollectionView.swift"; sourceTree = "<group>"; };
+		F093183921C9A7990020DFCD /* SwipingController + UICollectionViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController + UICollectionViewDelegateFlowLayout.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 				F07BEA2021C6479700D32FCB /* AppDelegate.swift */,
 				F07BEA2221C6479700D32FCB /* ViewController.swift */,
 				F07BEA3221C6942700D32FCB /* SwipingController.swift */,
-				F093183921C9A7990020DFCD /* SwipingController + UICollectionView.swift */,
+				F093183921C9A7990020DFCD /* SwipingController + UICollectionViewDelegateFlowLayout.swift */,
 				F093183721C9A7000020DFCD /* SwipingController + extension.swift */,
 				F07BEA3421C69C5600D32FCB /* PageCell.swift */,
 				F07BEA3621C6EAD800D32FCB /* Page.swift */,
@@ -150,7 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F093183A21C9A7990020DFCD /* SwipingController + UICollectionView.swift in Sources */,
+				F093183A21C9A7990020DFCD /* SwipingController + UICollectionViewDelegateFlowLayout.swift in Sources */,
 				F07BEA2321C6479700D32FCB /* ViewController.swift in Sources */,
 				F093183821C9A7000020DFCD /* SwipingController + extension.swift in Sources */,
 				F07BEA2121C6479700D32FCB /* AppDelegate.swift in Sources */,

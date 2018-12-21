@@ -49,15 +49,6 @@ class PageCell: UICollectionViewCell {
     
     private var descriptionTextView: UITextView! = {
         let textView = UITextView()
-        let attributedText = NSMutableAttributedString(string: "Join us today in our fun and games!",
-                                                       attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 18, weight: .heavy)])
-        attributedText.append(NSAttributedString(string: "Test string",
-                                                 attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 13),
-                                                              NSAttributedString.Key.foregroundColor : UIColor.gray]))
-        //        textView.font = UIFont.systemFont(ofSize: 18, weight: .heavy)
-        //        textView.text = "Join us today in our fun and games!"
-        //        textView.textColor = UIColor.black
-        textView.attributedText = attributedText
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.textAlignment = .center
         textView.isEditable = false
@@ -81,10 +72,10 @@ class PageCell: UICollectionViewCell {
         addSubview(topImageContainerView)
         addSubview(descriptionTextView)
         
-        // the leading and trailing anchors better to use then left and right anchors because certail languages such as
-        // Arabic it's a language that goes from fight to left so leading and trailing anchors is going to be aware of if the
-        // language is right to left ot left to right you don't have to worry about so much what the language orientation so
-        // Apple recommends to use leading and trailing
+//         the leading and trailing anchors better to use then left and right anchors because certail languages such as
+//         Arabic it's a language that goes from fight to left so leading and trailing anchors is going to be aware of if the
+//         language is right to left ot left to right you don't have to worry about so much what the language orientation so
+//         Apple recommends to use leading and trailing
         
         // topImageContainerView constraints
         topImageContainerView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.5).isActive = true
